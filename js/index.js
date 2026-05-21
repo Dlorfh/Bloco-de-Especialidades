@@ -2,14 +2,17 @@
 const select = document.getElementById("quantidade");
 const radios = document.getElementById("radios");
 
+//Adiciona um ouvinte de evento para o select de quantidade de itens
 select.addEventListener("change", function(){
-    radios.innerHTML = "";
-    const quantidade = Number(select.value);
+    radios.innerHTML = "";//Limpa os checkbox anteriores
+    const quantidade = Number(select.value);//Pega o valor do select e converte para número
 
+    //Se a quantidade for 0 ele não mostra nenhum checkbox
     if(!quantidade){
         return;
     }
 
+    //Cria os checkbox para a quantidade de itens selecionada
     for(let i = 1; i <= quantidade; i++){
         radios.innerHTML += `
         <label>
@@ -55,44 +58,36 @@ input.addEventListener("input", function(){
     });
 });
 
+//Adiciona um ouvinte de evento para o formulário que salva a especialidade digitada no localStorage
 form.addEventListener("submit", function(event){
-
+    //Impede que o navegador execute a ação padrão de um evento, como recarregar a página ao enviar um formulário.
     event.preventDefault();
-
+    //Pega o valor do input do nome da especialidade
     const nome = document.getElementById("nome").value;
-
-    // OBJETO NOVO
+    //Cria um objeto novo
     const especialidade = {
         nome
     };
-
-    // PEGA O QUE JÁ EXISTE
+    //Pega os dados salvos no localStorage ou cria um array vazio se não houver dados salvos
     const dadosSalvos =
         JSON.parse(
             localStorage.getItem("especialidades")
         ) || [];
 
-    // ADICIONA NOVO OBJETO
+    //Adicinas novas especialidades ao array de dados salvos
     dadosSalvos.push(especialidade);
-
-    // SALVA NOVAMENTE
+    //Salva de novo o array de dados salvos no localStorage, convertendo-o para uma string JSON
     localStorage.setItem(
         "especialidades",
         JSON.stringify(dadosSalvos)
     );
-
 });
 
+//Pega a div onde as especialidades salvas serão mostradas
 dados.forEach(function(item){
-
+    //Adiciona uma div para cada especialidade salva, mostrando o nome da especialidade
     lista.innerHTML += `
-    
         <div class="card">
-
             <h2>${item.nome}</h2>
-
-        </div>
-
-    `;
-
+        </div>`;
 });
