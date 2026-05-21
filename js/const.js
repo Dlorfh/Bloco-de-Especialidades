@@ -144,7 +144,7 @@ export const especialidades = [
     "Ioiô",
     
     "Jardinagem",
-    "Jogos-de-Cartas-Colecináveis",
+    "Jogos-de-Cartas-Colecionáveis",
     "Jogos-de-Tabuleiro",
     "Jornalismo",
 

@@ -22,6 +22,7 @@ select.addEventListener("change", function(){
     }
 });
 
+//Importa a lista de especialidades do arquivo const.js
 import {especialidades} from "./const.js";
 
 const input = document.getElementById("nome");
@@ -58,36 +59,53 @@ input.addEventListener("input", function(){
     });
 });
 
+const form = document.getElementById("main");
+
 //Adiciona um ouvinte de evento para o formulário que salva a especialidade digitada no localStorage
 form.addEventListener("submit", function(event){
-    //Impede que o navegador execute a ação padrão de um evento, como recarregar a página ao enviar um formulário.
     event.preventDefault();
-    //Pega o valor do input do nome da especialidade
+
     const nome = document.getElementById("nome").value;
-    //Cria um objeto novo
+    const itensMarcados = [];
+
+    const checkboxes =
+        document.querySelectorAll(
+            '#radios input[type="checkbox"]'
+        );
+
+    checkboxes.forEach(function(item, index){
+        if(item.checked){
+            itensMarcados.push(
+                `Item ${index + 1}`
+            );
+        }
+    });
+
     const especialidade = {
-        nome
+        nome,
+        imagem: imagem.src,
+        modalidade:
+            document.querySelectorAll("select")[0].value,
+        ramo:
+            document.querySelectorAll("select")[1].value,
+        quantidade:
+            document.getElementById("quantidade").value,
+        comentario:
+            document.querySelector("textarea").value,
+        itensMarcados
     };
-    //Pega os dados salvos no localStorage ou cria um array vazio se não houver dados salvos
+
     const dadosSalvos =
         JSON.parse(
             localStorage.getItem("especialidades")
         ) || [];
 
-    //Adicinas novas especialidades ao array de dados salvos
     dadosSalvos.push(especialidade);
-    //Salva de novo o array de dados salvos no localStorage, convertendo-o para uma string JSON
+
     localStorage.setItem(
         "especialidades",
         JSON.stringify(dadosSalvos)
     );
-});
 
-//Pega a div onde as especialidades salvas serão mostradas
-dados.forEach(function(item){
-    //Adiciona uma div para cada especialidade salva, mostrando o nome da especialidade
-    lista.innerHTML += `
-        <div class="card">
-            <h2>${item.nome}</h2>
-        </div>`;
+    alert("Especialidade salva com sucesso!");
 });
