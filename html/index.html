@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/Programação.png">
+    <title>Bloco de Especialidades</title>
+</head>
+<body>
+    <form id="main">
+        <div class="topo">
+            <div class="pesquisa">
+                <img id="imgEspecialidade" src="../img/especialidade.png" alt="especialidade">
+                <input id="nome" type="text" placeholder="Nome da Especialidade">
+                <div id="sugestoes"></div>
+            </div>
+        </div>
+        <div>
+            <p>Modalidade:
+                <select> 		
+                    <option selected>Nenhuma</option>
+                    <option>Mar</option>
+                    <option>Ar</option>
+                    <option>Base</option>
+                </select>
+            </p>
+            <p>Ramo:
+                <select> 		
+                    <option selected>Selecione</option>
+                    <option>Hab. Escoteiras</option>
+                    <option>Desportos</option>
+                    <option>Cultura</option>
+                    <option>Serviços</option>
+                    <option>Ciência Tecnologia</option>
+                </select>
+            </p>
+           <p>Quantidade de Itens:
+            <select id="quantidade"> 		
+            	<option selected>Selecione</option>
+				<option value="6">6</option>
+				<option value="9">9</option>
+				<option value="12">12</option>
+				<option value="15">15</option>
+				<option value="18">18</option>
+				<option value="21">21</option>
+		    </select>
+           </p> 
+           <p>Itens feitos: <div id="radios"></div></p>
+           
+            <p>Notas/Comentários:
+				<textarea cols="45" rows="5" placeholder="Ex: Ajuda no naval, etc..."></textarea>
+			</p>
+        </div>
+        <input type="submit" value="Salvar">
+		<input type="reset" value="Limpar">
+		<a href="notas.html">
+			<input type="button" value="Página das especialidades">
+		</a>
+    </form>
+
+    <script type="module"  src="../js/index.js"></script>
+</body>
+</html>

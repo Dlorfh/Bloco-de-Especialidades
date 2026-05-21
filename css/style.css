@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8qKrx9-omC-hbBUEdp5-JcSOSgsg2ndPkiQ&s);
+
+}
+#main{
+    width: 100%;
+    max-width: 700px;
+    background-color: #000756;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+#main img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    background-color: #f8fafc;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+#main input[type="text"]{
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+#main input[type="text"]:focus{
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+}
+#main p{
+    margin-bottom: 20px;
+    color: rgb(255, 4, 0);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+select{
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #d1d5db;
+    font-size: 15px;
+    transition: 0.3s;
+}
+select:focus{
+    outline: none;
+    border-color: #2563eb;
+}
+#radios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+#radios label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f1f5f9;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+#radios label:hover{
+    background-color: #dbeafe;
+}
+input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+textarea{
+    width: 100%;
+    resize: none;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #d1d5db;
+    font-size: 15px;
+    transition: 0.3s;
+}
+textarea:focus{
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+}
+@media(max-width: 600px){
+    #main{
+        padding: 20px;
+    }
+    #radios{
+        grid-template-columns: 1fr;
+    }
+}
+.topo{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+.topo img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+.pesquisa{
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media(max-width: 600px){
+
+    body{
+        padding: 15px;
+    }
+
+    #main{
+        padding: 20px;
+    }
+
+    .topo{
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 15px;
+    }
+
+    .topo img{
+        width: 140px;
+        height: 140px;
+    }
+
+    .topo input{
+        width: 100%;
+
+        font-size: 16px;
+    }
+
+    #main p{
+        font-size: 14px;
+    }
+
+    select,
+    textarea,
+    #main input[type="text"]{
+        font-size: 14px;
+    }
+
+    #radios{
+        grid-template-columns: 1fr;
+    }
+
+    #radios label{
+        width: 100%;
+    }
+
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"]{
+    padding: 14px 22px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+    margin-right: 10px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+input[type="submit"]{
+    background-color: #16a34a;
+}
+
+input[type="reset"]{
+    background-color: #dc2626;
+}
+input[type="button"]{
+    background-color: #2563eb;
+}
+a{
+    text-decoration: none;
+}
+#sugestoes{
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    max-height: 250px;
+    overflow-y: auto;
+}
+#sugestoes div{
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 15px;
+}
+#sugestoes div:hover{
+    background-color: #dbeafe;
+    padding-left: 22px;
+}
+@media(max-width: 600px){
+    .topo img{
+        width: 140px;
+        height: 140px;
+    }
+    .topo input{
+        font-size: 15px;
+    }
+}
