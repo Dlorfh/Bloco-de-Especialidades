@@ -1,4 +1,3 @@
-//Faz aparecer a quantidade de itens selecionada no select de quantidade de itens
 const select = document.getElementById("quantidade");
 const radios = document.getElementById("radios");
 
@@ -18,7 +17,8 @@ select.addEventListener("change", function(){
         <label>
         <input type="checkbox" name="item">
         Item ${i}
-        </label>`;
+        </label>
+        `;
     }
 });
 
@@ -65,22 +65,28 @@ const form = document.getElementById("main");
 form.addEventListener("submit", function(event){
     event.preventDefault();
 
+    //Pega o elemento que tem o id "nome"
     const nome = document.getElementById("nome").value;
+    
+    //Muda os itens marcados para nada
     const itensMarcados = [];
-
+    
+    //Pega todos os checkbox que tem o id "radios" e verifica quais estão marcados, se estiver marcado ele adiciona o nome do item na lista de itens marcados
     const checkboxes =
         document.querySelectorAll(
             '#radios input[type="checkbox"]'
         );
 
+    //Para cada checkbox ele verifica se está marcado, se estiver marcado ele adiciona o nome do item na lista de itens marcados
     checkboxes.forEach(function(item, index){
-        if(item.checked){
+        if(item.checked){//Se o item.checked for true ele adiciona o nome do item na lista de itens marcados
             itensMarcados.push(
                 `Item ${index + 1}`
             );
         }
     });
 
+    //Constante que guarda a especialidade com o nome, imagem, modalidade, ramo, quantidade, comentario e itens marcados
     const especialidade = {
         nome,
         imagem: imagem.src,
@@ -95,17 +101,21 @@ form.addEventListener("submit", function(event){
         itensMarcados
     };
 
+    //Constante que guarda os dados salvos no localStorage ou uma lista vazia caso não haja nenhum dado salvo
     const dadosSalvos =
         JSON.parse(
             localStorage.getItem("especialidades")
         ) || [];
 
+    //Adiciona a especialidade criada na lista de dados salvos e salva no localStorage
     dadosSalvos.push(especialidade);
 
+    //Salva a lista de dados salvos no localStorage como uma string JSON
     localStorage.setItem(
         "especialidades",
         JSON.stringify(dadosSalvos)
     );
 
+    //Alerta que a especialidade foi salva com sucesso
     alert("Especialidade salva com sucesso!");
 });
