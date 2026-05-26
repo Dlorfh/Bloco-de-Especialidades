@@ -102,7 +102,7 @@ function renderizarDetalhes(item, index) {
                 <span class="item-label-text">${text}</span>
             </label>
             ${isCustom ? '<button class="row-delete">Remover</button>' : ''}
-        `;//Se isCustom for true, adiciona um botão de remover, senão deixa vazio
+        `;//Se isCustom for true, adiciona um botão de remover, senão ele deixa vazio
         //Se for um item personalizado, adiciona um ouvinte de evento para o botão de remover, que remove a linha do checklist quando clicado
         const del = row.querySelector('.row-delete');
         if (del) {

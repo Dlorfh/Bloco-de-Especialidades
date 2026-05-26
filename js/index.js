@@ -107,7 +107,7 @@ form.addEventListener("submit", function(event){
             localStorage.getItem("especialidades")
         ) || [];
 
-    //Adiciona a especialidade criada na lista de dados salvos e salva no localStorage
+    //Adiciona a especialidade criada na lista de dados salvos e salva ela no localStorage
     dadosSalvos.push(especialidade);
 
     //Salva a lista de dados salvos no localStorage como uma string JSON
