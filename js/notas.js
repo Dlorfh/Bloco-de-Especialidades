@@ -225,7 +225,7 @@ function renderizarLista() {
         //Define o conteúdo HTML do item, mostrando o nome e a imagem (ou uma imagem padrão se não houver)
         itemCard.innerHTML = `
             <span>${item.nome}</span>
-            <img src="${item.imagem || "../img/especialidade.png"}" alt="${item.nome}">
+            <img src="${item.imagem || "./img/especialidade.png"}" alt="${item.nome}">
         `;
 
         //Adiciona um ouvinte de evento para cada item da lista

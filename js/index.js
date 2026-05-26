@@ -53,7 +53,7 @@ input.addEventListener("input", function(){
             input.value = item.replaceAll("-", " ");//Preenche o input com o nome da especialidade clicada sem o "-"
             sugestoes.innerHTML = "";
             //Procura a imagem correspondente a especialidade clicada e troca a imagem
-            imagem.src = `../img/${item}.png`;
+            imagem.src = `./img/${item}.png`;
         });
         sugestoes.appendChild(div);//Adiciona a div da especialidade encontrada na div de sugestões
     });
