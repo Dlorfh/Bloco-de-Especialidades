@@ -8,57 +8,71 @@
     <title>Bloco de Especialidades</title>
 </head>
 <body>
-    <form id="main">
-        <h1 id="titulo">Bloco de Especialidades</h1>
-        <div class="topo">
-            <div class="pesquisa">
-                <img id="imgEspecialidade" src="./img/especialidade.png" alt="especialidade">
-                <input id="nome" type="text" placeholder="Nome da Especialidade">
-                <div id="sugestoes"></div>
+    <main class="page-shell">
+        <form id="main">
+            <header class="form-header">
+                <h1 id="titulo">Bloco de Especialidades</h1>
+                <p class="subtitle">Registre especialidades, acompanhe seus itens e mantenha suas notas organizadas em um painel moderno.</p>
+            </header>
+            <div class="topo">
+                <div class="pesquisa">
+                    <img id="imgEspecialidade" src="./img/especialidade.png" alt="especialidade">
+                    <div class="input-group">
+                        <label for="nome">Especialidade</label>
+                        <input id="nome" type="text" placeholder="Nome da Especialidade">
+                        <div id="sugestoes"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div>
-            <p>Modalidade:
-                <select class="muda"> 		
-                    <option selected>Nenhuma</option>
-                    <option>Mar</option>
-                    <option>Ar</option>
-                    <option>Base</option>
-                </select>
-            </p>
-            <p>Ramo:
-                <select class="muda"> 		
-                    <option selected>Selecione</option>
-                    <option>Hab. Escoteiras</option>
-                    <option>Desportos</option>
-                    <option>Cultura</option>
-                    <option>Serviços</option>
-                    <option>Ciência Tecnologia</option>
-                </select>
-            </p>
-           <p>Quantidade de Itens:
-            <select id="quantidade" class="muda"> 		
-            	<option selected>Selecione</option>
-				<option value="6">6</option>
-				<option value="9">9</option>
-				<option value="12">12</option>
-				<option value="15">15</option>
-				<option value="18">18</option>
-				<option value="21">21</option>
-		    </select>
-           </p> 
-           <p>Itens feitos: <div id="radios"></div></p>
-            <p>Notas/Comentários:
-				<textarea cols="45" rows="5" placeholder="Ex: Ajuda no naval, etc..."></textarea>
-			</p>
-        </div>
-        <input type="submit" value="Salvar">
-		<input type="reset" value="Limpar">
-		<a href="notas.html">
-			<input type="button" value="Página das especialidades">
-		</a>
-    </form>
-    
-    <script type="module"  src="./js/index.js"></script>
+            <div class="fields">
+                <div class="field">
+                    <label for="modalidade">Modalidade</label>
+                    <select id="modalidade" class="muda">
+                        <option selected>Nenhuma</option>
+                        <option>Mar</option>
+                        <option>Ar</option>
+                        <option>Base</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="ramo">Ramo</label>
+                    <select id="ramo" class="muda">
+                        <option selected>Selecione</option>
+                        <option>Hab. Escoteiras</option>
+                        <option>Desportos</option>
+                        <option>Cultura</option>
+                        <option>Serviços</option>
+                        <option>Ciência Tecnologia</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="quantidade">Quantidade de Itens</label>
+                    <select id="quantidade" class="muda">
+                        <option selected>Selecione</option>
+                        <option value="6">6</option>
+                        <option value="9">9</option>
+                        <option value="12">12</option>
+                        <option value="15">15</option>
+                        <option value="18">18</option>
+                        <option value="21">21</option>
+                    </select>
+                </div>
+                <div class="field field-full">
+                    <label>Itens feitos</label>
+                    <div id="radios" class="radios-grid"></div>
+                </div>
+                <div class="field field-full">
+                    <label for="comentario">Notas/Comentários</label>
+                    <textarea id="comentario" cols="45" rows="5" placeholder="Ex: Ajuda no naval, etc..."></textarea>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="submit">Salvar</button>
+                <button type="reset" class="secondary">Limpar</button>
+                <a href="notas.html" class="button tertiary">Página das especialidades</a>
+            </div>
+        </form>
+    </main>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
