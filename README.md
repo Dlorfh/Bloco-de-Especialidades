@@ -12,4 +12,8 @@ Você pode tambem fazer alguns comentários.
 
 Abaixo tem o limpar, onde ele limpa tudo que foi marcado para poder registrar uma especialidade nova.
 Ao clicar no botão de salvar, ele salva automaticamente no localStorage do seu dispositivo.
-Clique no botão de acessar
+Clique no botão de Pagina de especialidade, para acessar as especialidades que você ja salvou.
+
+Ao acessar a pagina das especialidades, você vê quais especialidades você ja tem salva. Pode fechar a janela e reabrir que elas continuarão la.
+Ao clicar em cima de uma, você ve as informações que voce preencheu anteriormente. 
+Caso queira cadastrar mais uma especialidade você pode clicar no botão de voltar para a pagina inicial que ele irá voltar.
