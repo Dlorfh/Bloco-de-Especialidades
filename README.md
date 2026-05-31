@@ -10,7 +10,9 @@ Sistema web criado para ajudar no gerenciamento de especialidades escoteiras, pe
 
 ## Sobre o projeto
 
-O Bloco de Especialidades foi desenvolvido com o objetivo de facilitar o acompanhamento das especialidades escoteiras, oferecendo uma interface simples e intuitiva para organizar informações e registrar o progresso dos usuários.
+Item 7 da especialidade de Programação.
+
+O Bloco de Especialidades foi desenvolvido com o objetivo de facilitar o acompanhamento das especialidades escoteiras, tendo uma interface simples e intuitiva para organizar informações e registrar o progresso dos usuários.
 
 Além da área de especialidades, o sistema também possui um bloco de notas integrado, permitindo registrar informações importantes, ideias, lembretes e anotações relacionadas às atividades escoteiras.
 
@@ -43,5 +45,8 @@ Além da área de especialidades, o sistema também possui um bloco de notas int
 
 1. Clone o repositório:
 
-```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
+
+2. Entre na pasta que foi salvo o projeto.
+
+3. Abra o arquivo index.html no seu navegador.
