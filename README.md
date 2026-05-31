@@ -1,19 +1,47 @@
-Especialidade de Programação item 7: Bloco de especialidades
-Link do site já hospedado: https://bloco-de-especialidades.netlify.app/
+# Bloco de Especialidades
 
-Nesse projeto você pode cadastrar as especialidades que você que tirar no escotismo e armazenar no localStorage simulando um banco de dados.
+Sistema web criado para ajudar no gerenciamento de especialidades escoteiras, permitindo organizar, acompanhar e consultar especialidades de forma simples e prática.
 
-No index você digita o nome da especialidade e seleciona, automaticamente a imagem correspondente aparece.
-Você pode selecionar se a especialidade é de alguma modalidade especifica ou se não é de nenhuma.
-Você pode selecionar o ramo de conhecimento da especialidade.
-Você pode seleiconar o número de itens que a especialidade tem, após selecionar a quantidade, os itens aparecem abaixo.
-Após aparecerem os itens, você pode marcar quais você ja fez.
-Você pode tambem fazer alguns comentários.
+## Acesse o projeto
 
-Abaixo tem o limpar, onde ele limpa tudo que foi marcado para poder registrar uma especialidade nova.
-Ao clicar no botão de salvar, ele salva automaticamente no localStorage do seu dispositivo.
-Clique no botão de Pagina de especialidade, para acessar as especialidades que você ja salvou.
+🌐 Página principal: https://bloco-de-especialidades.netlify.app/
 
-Ao acessar a pagina das especialidades, você vê quais especialidades você ja tem salva. Pode fechar a janela e reabrir que elas continuarão la.
-Ao clicar em cima de uma, você ve as informações que voce preencheu anteriormente. 
-Caso queira cadastrar mais uma especialidade você pode clicar no botão de voltar para a pagina inicial que ele irá voltar.
+📝 Bloco de notas: https://bloco-de-especialidades.netlify.app/notas
+
+## Sobre o projeto
+
+O Bloco de Especialidades foi desenvolvido com o objetivo de facilitar o acompanhamento das especialidades escoteiras, oferecendo uma interface simples e intuitiva para organizar informações e registrar o progresso dos usuários.
+
+Além da área de especialidades, o sistema também possui um bloco de notas integrado, permitindo registrar informações importantes, ideias, lembretes e anotações relacionadas às atividades escoteiras.
+
+## Funcionalidades
+
+### Especialidades
+
+- 📋 Visualização de especialidades escoteiras
+- 🔍 Sistema de pesquisa para encontrar especialidades rapidamente
+- ✅ Marcação de itens concluídos
+- 💾 Salvamento automático utilizando Local Storage
+- 📱 Interface responsiva para dispositivos móveis e computadores
+
+### Bloco de Notas
+
+- 📝 Criação de múltiplas notas
+- 💾 Salvamento automático no navegador utilizando Local Storage
+- 📂 Armazenamento local sem necessidade de cadastro ou login
+- ⚡ Recuperação automática das anotações ao retornar ao site
+- 🖥️ Interface simples e prática para organização de informações
+
+## Tecnologias utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+- Local Storage
+
+## Como executar localmente
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
